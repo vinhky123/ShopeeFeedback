@@ -24,20 +24,30 @@ function sendRequest(url) {
       // Cập nhật giá trị của thanh progress bar
       var positiveProgressBar = $("#positiveProgressBar");
       var negativeProgressBar = $("#negativeProgressBar");
+      var positiveFeedbackCount = $("#positiveFeedbackCount");
+      var negativeFeedbackCount = $("#negativeFeedbackCount");
 
       sum = response[0] + response[1];
       percentagePositive = ((response[0] / sum) * 100).toFixed(2);
       percentageNegative = 100 - percentagePositive
-      $("#progress-container").show();
+
+      
+      var navTab = $("#navTab");
+      navTab.show();
 
       positiveProgressBar
         .css("width", percentagePositive + "%")
         .attr("aria-valuenow", percentagePositive)
-        .text("Positive " + response[0]);
+        .text(percentagePositive);
+
+      positiveFeedbackCount.text(response[0]);
+
       negativeProgressBar
         .css("width", percentageNegative + "%")
         .attr("aria-valuenow", percentageNegative)
-        .text("Negative " + response[1]);
+        .text(percentageNegative);
+
+      negativeFeedbackCount.text(response[1]);
     },
     or: function (xhr, status, error) {
       console.error("Error:", error);
@@ -50,6 +60,8 @@ function sendRequest(url) {
 
       var successAlert = $("#successAlert");
       successAlert.show();
+
+      
     },
   });
 }

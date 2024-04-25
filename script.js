@@ -33,11 +33,11 @@ function sendRequest(url) {
       positiveProgressBar
         .css("width", percentagePositive + "%")
         .attr("aria-valuenow", percentagePositive)
-        .text("Positive " + response[0] + "%");
+        .text("Positive " + response[0]);
       negativeProgressBar
         .css("width", percentageNegative + "%")
         .attr("aria-valuenow", percentageNegative)
-        .text("Negative " + response[1] + "%");
+        .text("Negative " + response[1]);
     },
     or: function (xhr, status, error) {
       console.error("Error:", error);

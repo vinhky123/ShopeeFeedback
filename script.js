@@ -11,7 +11,7 @@ function sendRequest(url) {
     url: "http://localhost:5000/api", // Thay your_port_here bằng số port của bạn
     type: "POST",
     contentType: "application/json",
-    data: JSON.stringify({ url: url }),
+    data: JSON.stringify(url),
     beforeSend: function () {
       // Thay đổi nút submit thành nút loading và vô hiệu hóa nó
       var submitButton = $("#urlForm button[type='submit']");
@@ -24,19 +24,20 @@ function sendRequest(url) {
       // Cập nhật giá trị của thanh progress bar
       var positiveProgressBar = $("#positiveProgressBar");
       var negativeProgressBar = $("#negativeProgressBar");
-      var postiveProgressText = $("#positiveProgressText");
-      var negativeProgressText = $("#negativeProgressText");
 
+      sum = response[0] + response[1];
+      percentagePositive = ((response[0] / sum) * 100).toFixed(2);
+      percentageNegative = 100 - percentagePositive
       $("#progress-container").show();
 
       positiveProgressBar
-        .css("width", response + "%")
-        .attr("aria-valuenow", response)
-        .text("Positive " + response + "%");
+        .css("width", percentagePositive + "%")
+        .attr("aria-valuenow", percentagePositive)
+        .text("Positive " + response[0] + "%");
       negativeProgressBar
-        .css("width", 100 - response + "%")
-        .attr("aria-valuenow", 100 - response)
-        .text("Negative " + (100 - response) + "%");
+        .css("width", percentageNegative + "%")
+        .attr("aria-valuenow", percentageNegative)
+        .text("Negative " + response[1] + "%");
     },
     or: function (xhr, status, error) {
       console.error("Error:", error);

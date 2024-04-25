@@ -9,7 +9,8 @@ function sendRequest(url) {
   $.ajax({
     url: "http://localhost:5000/api", // Thay your_port_here bằng số port của bạn
     type: "POST",
-    data: { url: url },
+    contentType: "application/json",
+    data: JSON.stringify({ url: url }),
     beforeSend: function () {
       // Thay đổi nút submit thành nút loading và vô hiệu hóa nó
       var submitButton = $("#urlForm button[type='submit']");

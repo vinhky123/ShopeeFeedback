@@ -1,6 +1,7 @@
 document.getElementById("urlForm").addEventListener("submit", function (event) {
   event.preventDefault(); // Ngăn chặn reload trang khi submit form
   var url = $("#urlInput").val(); // Lấy giá trị từ ô nhập URL
+  console.log("URL:", url);
   sendRequest(url); // Gửi yêu cầu đến localhost
 });
 

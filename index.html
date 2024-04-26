@@ -23,7 +23,7 @@
             <span class="text-success ms-5" id="successAlert" style="display: none">Done!</span>
         </form>
         <!-- Tab  -->
-        <div id="navTab" class="container-fluid" style="margin-left: 0; margin-right: 0; display:none;">
+        <div id="navTab" class="container mt-3" style="margin-left: 0; margin-right: 0; display:none;">
             <!-- Tab 1 -->
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -94,8 +94,8 @@
                 <div id="topWordFrequency" class="container tab-pane fade mt-2">
                     <h3 class="container m-5">Các từ khóa quan trọng</h3>
                     <div class="row">
-                        <div id="wordContainer-1" class="container col-6 p-0 text-success"></div>
-                        <div id="wordContainer-2" class="container col-6 p-0 text-danger"></div>
+                        <div id="wordFrequency-1" class="container col-6 p-0 text-success"></div>
+                        <div id="wordFrequency-2" class="container col-6 p-0 text-danger"></div>
                     </div>
                 </div>
             </div>
@@ -107,15 +107,15 @@
         <script>
             var words_pos = ["hay", "đẹp", "ngon", "nhẹ"]; // Thay thế bằng danh sách từ của bạn
             var words_neg = ["xấu", "tệ", "khó chịu", "đắng"]; // Thay thế bằng danh sách từ của bạn
-            var wordContainer_1 = $("#wordContainer-1");
-            var wordContainer_2 = $("#wordContainer-2");
+            var wordFrequency_1 = $("#wordFrequency-1");
+            var wordFrequency_2 = $("#wordFrequency-2");
 
             words_pos.forEach(word_pos => {
                 var span = $('<span></span>');
                 span.text(word_pos);
-                span.css('fontSize', Math.random() * 20 + 10 + 'px'); // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
+                span.css('fontSize', Math.random() * 70 + 10 + 'px'); // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
                 span.css('marginRight', '10px');
-                wordContainer_1.append(span);
+                wordFrequency_1.append(span);
             });
 
             words_neg.forEach(word_neg => {
@@ -123,7 +123,7 @@
                 span.text(word_neg);
                 span.css('fontSize', Math.random() * 50 + 10 + 'px'); // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
                 span.css('marginRight', '10px');
-                wordContainer_2.append(span);
+                wordFrequency_2.append(span);
             });
         </script>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi"">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <div class="container-fluid" style="padding: 500;">
-        <h1>Shopee Feedback Analyst Demo</h1>
+    <div class="container-fluid" style="padding:100px">
+        <h1 class="d-flex justify-content-center">Shopee Feedback Analyst Demo</h1>
         <!-- Form để nhập URL -->
         <form id="urlForm">
             <div class="mb-3">
@@ -23,7 +23,7 @@
             <span class="text-success ms-5" id="successAlert" style="display: none">Done!</span>
         </form>
         <!-- Tab  -->
-        <div id="navTab" class="container mt-3" style="margin-left: 0; margin-right: 0; display:none;">
+        <div id="navTab" class="container-fluid mt-3" style="margin-left: 0; margin-right: 0; display:none;">
             <!-- Tab 1 -->
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
@@ -44,7 +44,7 @@
             <!-- Progress Bar -->
             <div class="tab-content">
                 <div class="container tab-pane active" id="progress">
-                    <h3 class="container m-5">Tích/Tiêu cực của feedback</h3>
+                    <h2 class="d-flex justify-content-center mt-3">Tích/Tiêu cực của feedback</h3>
                     <div class="progress mt-4" id="progress-container" style="height: 20px;">
                         <div id="positiveProgressBar"
                             class="progress-bar progress-bar-striped progress-bar-animated bg-success "
@@ -67,7 +67,7 @@
                 </div>
                 <!-- Top feedback -->
                 <div id="topFeedback" class="container tab-pane fade mt-2"">
-                    <h3 class = " container m-5">Các feedback quan trọng</h3>
+                    <h2 class = "d-flex justify-content-center mt-3">Các feedback quan trọng</h3>
                     <div class="row">
                         <div class="col-6 p-0">
                             <ul id="positiveFeedbackList" class="list-group">
@@ -91,11 +91,15 @@
                 </div>
 
                 <!--Top Word Frequency -->
-                <div id="topWordFrequency" class="container tab-pane fade mt-2">
-                    <h3 class="container m-5">Các từ khóa quan trọng</h3>
-                    <div class="row">
-                        <div id="wordFrequency-1" class="container col-6 p-0 text-success"></div>
-                        <div id="wordFrequency-2" class="container col-6 p-0 text-danger"></div>
+                <div id="topWordFrequency" class="container tab-pane fade">
+                    <h2 class="d-flex justify-content-center mt-3">Các từ khóa quan trọng</h3>
+                    <div class="container mt-3 p-0 d-flex h">
+                        <span class="p-0 text-success flex-fill">
+                            <span id="wordFrequency-1"></span>
+                        </span>
+                        <span class="p-0 text-danger flex-fill">
+                            <span id="wordFrequency-2"></span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -104,28 +108,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="script.js"></script>
-        <script>
-            var words_pos = ["hay", "đẹp", "ngon", "nhẹ"]; // Thay thế bằng danh sách từ của bạn
-            var words_neg = ["xấu", "tệ", "khó chịu", "đắng"]; // Thay thế bằng danh sách từ của bạn
-            var wordFrequency_1 = $("#wordFrequency-1");
-            var wordFrequency_2 = $("#wordFrequency-2");
-
-            words_pos.forEach(word_pos => {
-                var span = $('<span></span>');
-                span.text(word_pos);
-                span.css('fontSize', Math.random() * 70 + 10 + 'px'); // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
-                span.css('marginRight', '10px');
-                wordFrequency_1.append(span);
-            });
-
-            words_neg.forEach(word_neg => {
-                var span = $('<span></span>');
-                span.text(word_neg);
-                span.css('fontSize', Math.random() * 50 + 10 + 'px'); // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
-                span.css('marginRight', '10px');
-                wordFrequency_2.append(span);
-            });
-        </script>
 </body>
 
 </html>

@@ -60,8 +60,27 @@ function sendRequest(url) {
 
       var successAlert = $("#successAlert");
       successAlert.show();
-
-      
+   
     },
   });
 }
+
+// Top word frequency tab
+var words_pos = ["hay", "đẹp", "ngon", "nhẹ"]; // Thay thế bằng danh sách từ của bạn
+var words_neg = ["xấu", "tệ", "khó chịu", "đắng"]; // Thay thế bằng danh sách từ của bạn
+var wordFrequency_1 = $("#wordFrequency-1");
+var wordFrequency_2 = $("#wordFrequency-2");
+
+words_pos.forEach(word_pos => {
+    var span = document.createElement('span');
+    span.textContent = word_pos;
+    span.style.fontSize = (Math.random() * 4 + 0.5) + 'vw';  // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
+    wordFrequency_1.append(span);
+});
+
+words_neg.forEach(word_neg => {
+    var span = document.createElement('span');
+    span.textContent = word_neg;
+    span.style.fontSize = (Math.random() * 4 + 0.5) + 'vw'; // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
+    wordFrequency_2.append(span);
+});

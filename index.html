@@ -40,7 +40,7 @@
                 </li>
             </ul>
 
-        <!-- Tab content -->
+            <!-- Tab content -->
             <!-- Progress Bar -->
             <div class="tab-content">
                 <div class="container tab-pane active" id="progress">
@@ -67,24 +67,24 @@
                 </div>
                 <!-- Top feedback -->
                 <div id="topFeedback" class="container tab-pane fade mt-2"">
-                    <h3 class = "container m-5">Các feedback quan trọng</h3>
+                    <h3 class = " container m-5">Các feedback quan trọng</h3>
                     <div class="row">
                         <div class="col-6 p-0">
                             <ul id="positiveFeedbackList" class="list-group">
-                                <li class="list-group-item">Positive Feedback</li>
-                                <li class="list-group-item">Positive Feedback</li>
-                                <li class="list-group-item">Positive Feedback</li>
-                                <li class="list-group-item">Positive Feedback</li>
-                                <li class="list-group-item">Positive Feedback</li>
+                                <li class="list-group-item">Top 1 fb tích cực</li>
+                                <li class="list-group-item">Top 2 fb tích cực</li>
+                                <li class="list-group-item">Top 3 fb tích cực</li>
+                                <li class="list-group-item">Top 4 fb tích cực</li>
+                                <li class="list-group-item">Top 5 fb tích cực</li>
                             </ul>
                         </div>
                         <div class="col-6 p-0">
                             <ul id="negativeFeedbackList" class="list-group">
-                                <li class="list-group-item">Positive Feedback</li>
-                                <li class="list-group-item">Positive Feedback</li>
-                                <li class="list-group-item">Positive Feedback</li>
-                                <li class="list-group-item">Positive Feedback</li>
-                                <li class="list-group-item">Positive Feedback</li>
+                                <li class="list-group-item">Top 1 fb tiêu cực</li>
+                                <li class="list-group-item">Top 2 fb tiêu cực</li>
+                                <li class="list-group-item">Top 3 fb tiêu cực</li>
+                                <li class="list-group-item">Top 4 fb tiêu cực</li>
+                                <li class="list-group-item">Top 5 fb tiêu cực</li>
                             </ul>
                         </div>
                     </div>
@@ -92,14 +92,10 @@
 
                 <!--Top Word Frequency -->
                 <div id="topWordFrequency" class="container tab-pane fade mt-2">
-                    <h3 class = "container m-5">Các từ khóa quan trọng</h3>
+                    <h3 class="container m-5">Các từ khóa quan trọng</h3>
                     <div class="row">
-                        <div class="col-6 p-0 text-success">
-                            <p>Sản phẩm đỉnh vãi l</p>
-                        </div>
-                        <div class="col-6 p-0 text-danger">
-                            <p>Sản phẩm tệ vãi l</p>
-                        </div>
+                        <div id="wordContainer-1" class="container col-6 p-0 text-success"></div>
+                        <div id="wordContainer-2" class="container col-6 p-0 text-danger"></div>
                     </div>
                 </div>
             </div>
@@ -108,6 +104,28 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="script.js"></script>
+        <script>
+            var words_pos = ["hay", "đẹp", "ngon", "nhẹ"]; // Thay thế bằng danh sách từ của bạn
+            var words_neg = ["xấu", "tệ", "khó chịu", "đắng"]; // Thay thế bằng danh sách từ của bạn
+            var wordContainer_1 = $("#wordContainer-1");
+            var wordContainer_2 = $("#wordContainer-2");
+
+            words_pos.forEach(word_pos => {
+                var span = $('<span></span>');
+                span.text(word_pos);
+                span.css('fontSize', Math.random() * 20 + 10 + 'px'); // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
+                span.css('marginRight', '10px');
+                wordContainer_1.append(span);
+            });
+
+            words_neg.forEach(word_neg => {
+                var span = $('<span></span>');
+                span.text(word_neg);
+                span.css('fontSize', Math.random() * 50 + 10 + 'px'); // Điều chỉnh kích thước font ngẫu nhiên từ 10px đến 30px
+                span.css('marginRight', '10px');
+                wordContainer_2.append(span);
+            });
+        </script>
 </body>
 
 </html>

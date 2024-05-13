@@ -63,7 +63,7 @@
                 </p>
             </div>
             <div class="container m-0 p-0" id="page2Form">
-                <form>
+
                     <form id="urlForm" class="col-sm-12 col-md-8">
                         <div class="mb-3">
                             <input type="text" class="form-control" id="urlInput" placeholder="https://shopee.vn/..."
@@ -72,7 +72,7 @@
                         <button type="submit" class="btn" id="submitButton">Submit</button>
                         <span class="text-success ms-5" id="successAlert" style="display: none">Done!</span>
                     </form>
-                </form>
+
             </div>
         </div>
     </div>
@@ -87,25 +87,25 @@
                     <div class="carousel-item active">
                         <div class="container ps-5 pe-5 page3Slide" id="page3Slide1">
                             <h2>Number of Positive/Negative feedback</h2>
-                            <div class="container" id="progress">
-                                <div class="progress" id="progress-container" style="height: 40px;">
+                            <div class="container p-0" id="progress">
+                                <div class="progress mb-3" id="progress-container" style="height: 40px;">
                                     <div id="positiveProgressBar"
-                                        class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                                        class="progress-bar"
                                         role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
                                         aria-valuemax="100">
                                     </div>
                                     <div id="negativeProgressBar"
-                                        class="progress-bar progress-bar-striped progress-bar-animated  bg-danger"
+                                        class="progress-bar"
                                         role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
                                         aria-valuemax="100">
                                     </div>
                                 </div>
                                 <div class="container d-flex justify-content-between pb-4" style="font-size:medium;">
                                     <span>
-                                        <span id="positiveFeedbackCount">0</span> Positive Feedback
+                                        <span id="positiveFeedbackCount">0</span> Positive Feedbacks
                                     </span>
                                     <span>
-                                        <span id="negativeFeedbackCount">0</span> Negative Feedback
+                                        <span id="negativeFeedbackCount">0</span> Negative Feedbacks
                                     </span>
                                 </div>
                             </div>

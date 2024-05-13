@@ -67,6 +67,15 @@ html {
   #headerBox {
     width: 90%;
   }
+
+  .navbar-brand {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #page1 ul{
+    padding: 0 !important;
+  }
 }
 
 #headerBox h1 {
@@ -120,20 +129,6 @@ html {
   height: 60%;
 }
 
-@media screen and (max-width: 576px) {
-  #page2MainPage {
-    flex-direction: column;
-    width: 95%;
-    height: auto;
-  }
-  #page2Title {
-    width: 100%;
-  }
-  #page2Form {
-    width: 100%;
-  }
-}
-
 #page2Title {
   width: 50%;
   margin: 0;
@@ -148,6 +143,20 @@ html {
 #page2Form {
   margin: 0;
   width: 40%;
+}
+
+@media screen and (max-width: 576px) {
+  #page2MainPage {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+  #page2Title {
+    width: 100% !important;
+  }
+  #page2Form {
+    width: 100% !important;
+  }
 }
 
 #submitButton {
@@ -180,16 +189,18 @@ html {
 }
 
 #page3MainPage h1 {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: bold;
 }
 
-.carousel{
+.carousel {
   width: 100% !important;
 }
 
-#page3Slide1, #page3Slide2, #page3Slide3 {
-  background-color: #5E6673;
+#page3Slide1,
+#page3Slide2,
+#page3Slide3 {
+  background-color: #5e6673;
   border-radius: 10px;
   color: #ececec;
   flex-direction: row;
@@ -203,7 +214,9 @@ html {
 }
 
 @media screen and (max-width: 576px) {
-  #page3Slide1, #page3Slide2, #page3Slide3 {
+  #page3Slide1,
+  #page3Slide2,
+  #page3Slide3 {
     flex-direction: column;
     width: 95%;
     height: auto;

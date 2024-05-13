@@ -136,7 +136,7 @@ html {
 
 #page2Title h1 {
   font-family: "Angkor", cursive;
-  font-size: 2.5em;
+  font-size: 3em;
   text-shadow: 2px 2px 2px rgba(0, 61, 64, 0.5);
 }
 
@@ -221,6 +221,14 @@ html {
     width: 95%;
     height: auto;
   }
+}
+
+#page3Slide1 {
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 #toTopButton {

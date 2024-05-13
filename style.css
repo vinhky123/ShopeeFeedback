@@ -175,7 +175,21 @@ html {
 #page3 {
   background-color: #222831;
   height: 100vh;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s, opacity 0.5s;
   display: flex;
+}
+
+#page3.not-active {
+  max-height: 0;
+  opacity: 0;
+}
+
+#page3.active {
+  max-height: 100vh;
+  opacity: 1;
 }
 
 #page3MainPage {

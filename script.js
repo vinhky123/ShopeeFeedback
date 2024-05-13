@@ -1,5 +1,7 @@
 // To Top Button -----------------------------------------------------------------------------------------
-window.onscroll = function() {scrollButton()};
+window.onscroll = function () {
+  scrollButton();
+};
 
 function scrollButton() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -10,17 +12,17 @@ function scrollButton() {
 }
 
 function goToTop() {
-  var top = document.body
+  var top = document.body;
   if (top) {
-    top.scrollIntoView({behavior: "smooth"});
-  }  
+    top.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 // Start Button on page 1 -----------------------------------------------------------------------------------------
 function goToPage2() {
   var page2 = document.getElementById("page2");
   if (page2) {
-    page2.scrollIntoView({behavior: "smooth"});
+    page2.scrollIntoView({ behavior: "smooth" });
   }
 }
 
@@ -31,11 +33,16 @@ var page3Apearence = false;
 function togglePage3() {
   if (page3) {
     if (page3Apearence) {
-      page3.style.display = "none";
+      page3.classList.add('not-active');
+      page3.classList.remove('active');
       page3Apearence = false;
     } else {
-      page3.style.display = "block";
+      page3.classList.add('active');
+      page3.classList.remove('not-active');
       page3Apearence = true;
+      setTimeout(function() {
+        page3.scrollIntoView({ behavior: "smooth" });
+      }, 400);
     }
   }
 }
@@ -45,7 +52,7 @@ document.getElementById("urlForm").addEventListener("submit", function (event) {
   event.preventDefault();
   var url = $("#urlInput").val();
   console.log("URL:", url);
-  sendRequest(url); 
+  sendRequest(url);
 });
 
 // Hàm gửi yêu cầu đến localhost và xử lý kết quả
@@ -54,7 +61,7 @@ function sendRequest(url) {
     url: "http://localhost:5000/",
     type: "POST",
     contentType: "application/json",
-    data: JSON.stringify({ "url": url }),
+    data: JSON.stringify({ url: url }),
     beforeSend: function () {
       var submitButton = $("#urlForm button[type='submit']");
       submitButton.html(
@@ -81,12 +88,11 @@ function sendRequest(url) {
           .addClass("bg-secondary")
           .attr("aria-valuenow", percentagePositive)
           .text("No positive/negative feedback");
-
       }
       // Nếu có
       else {
         sum = positiveCount + negativeCount;
-        percentagePositive = ((positiveCount/ sum) * 100).toFixed(2);
+        percentagePositive = ((positiveCount / sum) * 100).toFixed(2);
         percentageNegative = (100 - percentagePositive).toFixed(2);
 
         positiveProgressBar
@@ -111,15 +117,13 @@ function sendRequest(url) {
     complete: function () {
       // Đặt lại nút submit về trạng thái ban đầu
       var submitButton = $("#urlForm button[type='submit']");
-      submitButton.html("Again");
       submitButton.attr("disabled", false);
 
       var successAlert = $("#successAlert");
       successAlert.show();
-      submitButton.off('click').on('click', function (e) {
+      submitButton.off("click").on("click", function (e) {
         e.preventDefault();
         location.reload();
-
       });
     },
   });

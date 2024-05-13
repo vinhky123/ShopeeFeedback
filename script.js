@@ -33,18 +33,26 @@ var page3Apearence = false;
 function togglePage3() {
   if (page3) {
     if (page3Apearence) {
-      page3.classList.add('not-active');
-      page3.classList.remove('active');
-      page3Apearence = false;
+      page3Disapear();
     } else {
-      page3.classList.add('active');
-      page3.classList.remove('not-active');
-      page3Apearence = true;
-      setTimeout(function() {
-        page3.scrollIntoView({ behavior: "smooth" });
-      }, 400);
+      page3Appear();
     }
   }
+}
+
+function page3Disapear() {
+  page3.classList.add("not-active");
+  page3.classList.remove("active");
+  page3Apearence = false;
+}
+
+function page3Appear() {
+  page3.classList.add("active");
+  page3.classList.remove("not-active");
+  page3Apearence = true;
+  setTimeout(function () {
+    page3.scrollIntoView({ behavior: "smooth" });
+  }, 400);
 }
 
 // Calling API to localhost -----------------------------------------------------------------------------------------
@@ -71,6 +79,8 @@ function sendRequest(url) {
     },
     success: function (response) {
       page3Apearence = true;
+      page3Appear();
+      
       var positiveProgressBar = $("#positiveProgressBar");
       var negativeProgressBar = $("#negativeProgressBar");
       var positiveFeedbackCount = $("#positiveFeedbackCount");

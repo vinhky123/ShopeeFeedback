@@ -70,6 +70,7 @@ function sendRequest(url) {
       submitButton.attr("disabled", true);
     },
     success: function (response) {
+      page3Apearence = true;
       var positiveProgressBar = $("#positiveProgressBar");
       var negativeProgressBar = $("#negativeProgressBar");
       var positiveFeedbackCount = $("#positiveFeedbackCount");

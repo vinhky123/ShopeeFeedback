@@ -13,6 +13,10 @@ html {
   background: #393e46;
 }
 
+body {
+  visibility: hidden;
+}
+
 #page1 {
   background-color: #ede4e4;
   height: 120vh;

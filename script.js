@@ -1,3 +1,9 @@
+// Load page -----------------------------------------------------------------------------------------
+window.addEventListener('load', function() {
+  // All resources, including images, have loaded
+  document.body.style.visibility = 'visible';
+});
+
 // To Top Button -----------------------------------------------------------------------------------------
 window.onscroll = function () {
   scrollButton();

@@ -78,7 +78,7 @@ body {
     padding: 0 !important;
   }
 
-  #page1 ul{
+  #page1 ul {
     padding: 0 !important;
   }
 }
@@ -223,7 +223,6 @@ body {
   align-items: center;
 }
 
-
 #page3Slide1,
 #page3Slide2,
 #page3Slide3 {
@@ -250,7 +249,7 @@ body {
 }
 
 #page3Slide1 {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 #toTopButton {
@@ -279,6 +278,37 @@ body {
 
 .negativeProgressBar-active {
   background-color: #c44536;
+}
+
+#topCommentTable {
+  font-family: "Lato", sans-serif;
+  font-size: 0.4em;
+  border-collapse: collapse;
+}
+
+#page3 table {
+  border: #b4b2b2 !important;
+}
+
+#topCommentTable td {
+  background-color: transparent !important;
+  border: 0px solid #b4b2b2 !important;
+} 
+
+#topCommentTable #row1 {
+  border-width: 0 0 0 0 !important;
+}
+
+#topCommentTable #row2 {
+  border-width: 1px 0 0 0 !important;
+}
+
+#topCommentTable #row3 {
+  border-width: 1px 0 0 0 !important;
+}
+
+#topCommentTable .column2 {
+  border-width: 0 0 0 1px !important;
 }
 
 #buttonBorder {

@@ -64,21 +64,21 @@
             </div>
             <div class="container m-0 p-0" id="page2Form">
 
-                    <form id="urlForm" class="col-sm-12 col-md-8">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" id="urlInput" placeholder="https://shopee.vn/..."
-                                required />
-                        </div>
-                        <button type="submit" class="btn" id="submitButton">Submit</button>
-                        <span class="text-success ms-5" id="successAlert" style="display: none">Done!</span>
-                    </form>
+                <form id="urlForm" class="col-sm-12 col-md-8">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="urlInput" placeholder="https://shopee.vn/..."
+                            required />
+                    </div>
+                    <button type="submit" class="btn" id="submitButton">Submit</button>
+                    <span class="text-success ms-5" id="successAlert" style="display: none">Done!</span>
+                </form>
 
             </div>
         </div>
     </div>
     <div class="container" id="dividePageLine"></div>
-    
-    <div class="container d-flex p-0 not-active" id="page3">
+
+    <div class="container d-flex p-0 active" id="page3">
         <div class="container d-flex p-0" id="page3MainPage">
             <h1 class="m-0 mb-3">
                 Here is your results
@@ -90,15 +90,11 @@
                             <h2>Number of Positive/Negative feedback</h2>
                             <div class="container p-0" id="progress">
                                 <div class="progress mb-3" id="progress-container" style="height: 40px;">
-                                    <div id="positiveProgressBar"
-                                        class="progress-bar"
-                                        role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
-                                        aria-valuemax="100">
+                                    <div id="positiveProgressBar" class="progress-bar" role="progressbar"
+                                        style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                                     </div>
-                                    <div id="negativeProgressBar"
-                                        class="progress-bar"
-                                        role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
-                                        aria-valuemax="100">
+                                    <div id="negativeProgressBar" class="progress-bar" role="progressbar"
+                                        style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
                                     </div>
                                 </div>
                                 <div class="container d-flex justify-content-between pb-4" style="font-size:medium;">
@@ -115,7 +111,26 @@
                     <div class="carousel-item">
                         <div class="container ps-5 pe-5 page3Slide" id="page3Slide2">
                             <h2>Top comment</h2>
-                            <p>This is the content for slide 2.</p>
+                            <div class="container p-0" id="topComment">
+                                <div class="container d-flex" id="page3Slide2Content">
+                                    <table class="table" id = "topCommentTable">
+                                        <tbody>
+                                            <tr id = "row1">
+                                                <td class = "column1">Data 1</td>
+                                                <td class = "column2">Data 2</td>
+                                            </tr>
+                                            <tr id = "row2">
+                                                <td class = "column1">Data 3</td>
+                                                <td class = "column2">Data 4</td>
+                                            </tr>
+                                            <tr id = "row3">
+                                                <td class = "column1">Data 5</td>
+                                                <td class = "column2">Data 6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item">

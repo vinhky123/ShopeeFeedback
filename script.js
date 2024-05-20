@@ -67,6 +67,7 @@ document.getElementById("urlForm").addEventListener("submit", function (event) {
   var url = $("#urlInput").val();
   console.log("URL:", url);
   sendRequest(url);
+
 });
 
 // Hàm gửi yêu cầu đến localhost và xử lý kết quả
@@ -76,6 +77,7 @@ function sendRequest(url) {
     type: "POST",
     contentType: "application/json",
     data: JSON.stringify({ url: url }),
+
     beforeSend: function () {
       var submitButton = $("#urlForm button[type='submit']");
       submitButton.html(
@@ -86,6 +88,8 @@ function sendRequest(url) {
     success: function (response) {
       page3Apearence = true;
       page3Appear();
+
+      console.log(response);
       
       var positiveProgressBar = $("#positiveProgressBar");
       var negativeProgressBar = $("#negativeProgressBar");
@@ -111,9 +115,12 @@ function sendRequest(url) {
         sum = positiveCount + negativeCount;
         percentagePositive = ((positiveCount / sum) * 100).toFixed(2);
         percentageNegative = (100 - percentagePositive).toFixed(2);
+        
+        percentagePositiveFit = parseFloat(percentagePositive) + 0.01;
+        percentageNegativeFit = parseFloat(percentageNegative) + 0.01;
 
         positiveProgressBar
-          .css("width", percentagePositive + "%")
+          .css("width", percentagePositiveFit + "%")
           .addClass("positiveProgressBar-active")
           .attr("aria-valuenow", percentagePositive)
           .text(percentagePositive);
@@ -121,7 +128,7 @@ function sendRequest(url) {
         positiveFeedbackCount.text(positiveCount);
 
         negativeProgressBar
-          .css("width", percentageNegative + "%")
+          .css("width", percentageNegativeFit + "%")
           .addClass("negativeProgressBar-active")
           .attr("aria-valuenow", percentageNegative)
           .text(percentageNegative);
@@ -145,3 +152,4 @@ function sendRequest(url) {
     },
   });
 }
+

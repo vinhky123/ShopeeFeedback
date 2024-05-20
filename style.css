@@ -299,11 +299,11 @@ body {
   border-width: 0 0 0 0 !important;
 }
 
-#topCommentTable #row2 {
+#topCommentTable #row2, #topCommentTable #row3, #topCommentTable #row4 {
   border-width: 1px 0 0 0 !important;
 }
 
-#topCommentTable #row3 {
+#topCommentTable #row5 {
   border-width: 1px 0 0 0 !important;
 }
 

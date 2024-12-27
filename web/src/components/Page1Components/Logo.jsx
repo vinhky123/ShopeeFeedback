@@ -1,7 +1,7 @@
 import styles from "./Navigator/NavigatorBar.module.css";
 
 function Logo() {
-  const LogoSrc = "src/assets/logo.png";
+  const LogoSrc = "/logo.png";
 
   return (
     <a className={`${styles.navBarBrand} navbar-brand ms-3`}>

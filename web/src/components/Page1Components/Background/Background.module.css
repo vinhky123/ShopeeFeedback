@@ -1,5 +1,5 @@
 .bgImage {
-  background-image: url("src/assets/cover.jpg");
+  background-image: url("public/cover.jpg");
   height: 110vh; /* This will make the image cover the full viewport height */
   background-position: center;
   background-repeat: no-repeat;

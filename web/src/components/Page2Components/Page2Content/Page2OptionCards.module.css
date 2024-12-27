@@ -1,0 +1,116 @@
+.animatedButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid;
+  border-color: transparent;
+  font-size: 16px;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #1f387e;
+  box-shadow: 0 0 0 2px #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animatedButton svg {
+  position: absolute;
+  width: 24px;
+  fill: #1f387e;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animatedButton .arr1Right {
+  right: 16px;
+}
+
+.animatedButton .arr2Right {
+  left: -25%;
+}
+
+.animatedButton .arr1Left {
+  left: 16px;
+}
+
+.animatedButton .arr2Left {
+  right: -25%;
+}
+
+.animatedButton .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #c5e5e4;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animatedButton .text {
+  position: relative;
+  z-index: 1;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.textRight {
+  transform: translateX(-12px);
+}
+
+.textLeft {
+  transform: translateX(12px);
+}
+
+.animatedButton:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #212121;
+  border-radius: 12px;
+}
+
+.animatedButton:hover .arr1Right {
+  right: -25%;
+}
+
+.animatedButton:hover .arr2Right {
+  left: 16px;
+}
+
+.animatedButton:hover .arr1Left {
+  left: -25%;
+}
+
+.animatedButton:hover .arr2Left {
+  right: 16px;
+}
+
+.animatedButton:hover .textRight {
+  transform: translateX(12px);
+}
+
+.animatedButton:hover .textLeft {
+  transform: translateX(-12px);
+}
+
+.animatedButton:hover svg {
+  fill: #1f387e;
+}
+
+.animatedButton:active {
+  scale: 0.9;
+}
+
+.animatedButton:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+.arrowLeft {
+  transform: rotate(90deg);
+}

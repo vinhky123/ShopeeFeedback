@@ -1,0 +1,16 @@
+.iconContainer {
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+.icon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(-50px);
+  fill: #000; /* Change this to the color you want the icon to be */
+}

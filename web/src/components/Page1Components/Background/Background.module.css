@@ -1,0 +1,54 @@
+.bgImage {
+  background-image: url("src/assets/cover.jpg");
+  height: 110vh; /* This will make the image cover the full viewport height */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(255, 254, 254, 0.644); /* Semi-transparent white */
+  color: black;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.containerBox {
+  margin-top: -10em;
+  border-radius: 20px;
+  background-color: rgba(60, 110, 113, 0.85);
+  padding: 2em;
+  color: #ececec;
+  width: 60%;
+}
+
+@media screen and (max-width: 800px) {
+  .containerBox {
+    width: 90%;
+  }
+}
+
+.h1 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 3.5em;
+  text-shadow: 2px 2px 4px rgba(137, 133, 133, 0.5);
+}
+
+.button {
+  padding: 1em 2.7em;
+  font-weight: 500;
+  background: #1f2937;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.6em;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: rgba(11, 14, 18, 0.8);
+}

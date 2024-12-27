@@ -1,0 +1,21 @@
+.title {
+  font-size: 3em;
+  color: #08818f;
+  font-family: "Angkor", cursive;
+  width: 60%;
+  margin: 0;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleContainer {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 25vh;
+  width: 100%;
+  align-items: center;
+}
+

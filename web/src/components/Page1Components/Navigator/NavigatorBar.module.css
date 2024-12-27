@@ -1,0 +1,26 @@
+.navigator {
+  background-color: rgba(34, 40, 49, 0.98);
+  height: 10vh;
+  border-radius: 0 0 3px 3px;
+}
+
+.navigatorLink {
+  color: white;
+}
+
+.navigatorItem {
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navigatorItem:hover {
+  background-color: #93a0b4;
+  animation-duration: 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+  .navBarBrand {
+    margin: 0;
+    padding: 0;
+  }
+}

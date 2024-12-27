@@ -1,0 +1,154 @@
+.analyseForm {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.15s ease-in-out;
+}
+
+.formContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #0e2954;
+}
+
+.formSubTitle {
+  margin: 0;
+  align-items: flex-start;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 20px;
+  align-items: flex-end;
+  position: absolute;
+  width: calc(100% - 30px);
+  transition: all 0.3s ease-in-out;
+  bottom: 20px;
+}
+
+.fieldContainer {
+  border: 1px solid #a7a7a7;
+  border-radius: 8px;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.input {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: relative;
+}
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #a7a7a7;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  z-index: 99;
+}
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  top: -17px;
+  transform: none;
+  font-size: 12px;
+}
+
+.btn {
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  background: #0e2954;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover(:not:disabled) {
+  background: rgba(14, 41, 84, 0.9);
+  scale: 1.05;
+}
+
+.form > .btn {
+  align-self: center;
+}
+
+.btnLabel {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+  .formContainer {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  .formContainer {
+    width: 70%;
+  }
+}
+
+.btn:disabled .btnLabel,
+.btn:disabled {
+  color: white;
+  background-color: #888;
+  cursor: not-allowed;
+  scale: (1);
+}
+
+.btn:disabled:hover {
+  scale: 1;
+}

@@ -1,0 +1,50 @@
+.Btn {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(#44ea76, #39fad7);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  z-index: 99;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.show {
+  display: flex;
+}
+
+.arrow path {
+  fill: white;
+}
+
+.Btn:hover .arrow {
+  animation: slide-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.Btn:not(:hover) .arrow {
+  animation: slide-out 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,152 @@
+#page3 {
+  background-color: #222831;
+  height: 100vh;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s, opacity 0.5s;
+  display: flex;
+}
+
+#page3.not-active {
+  max-height: 0;
+  opacity: 0;
+}
+
+#page3.active {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+#page3MainPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+  color: #ececec;
+  font-size: 3em;
+}
+
+#page3MainPage h1 {
+  font-weight: bold;
+}
+
+.carousel {
+  width: 100% !important;
+  height: 60% !important;
+}
+
+.carousel-inner {
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+}
+
+#page3Slide1,
+#page3Slide2,
+#page3Slide3 {
+  background-color: #5e6673;
+  border-radius: 10px;
+  color: #ececec;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 70%;
+}
+
+@media screen and (max-width: 576px) {
+  #page3Slide1,
+  #page3Slide2,
+  #page3Slide3 {
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+  }
+}
+
+#page3Slide1 {
+  font-family: "Inter", sans-serif;
+}
+
+#toTopButton {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 576px) {
+  #toTopButton {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+.positiveProgressBar-active {
+  background-color: #197278;
+}
+
+.negativeProgressBar-active {
+  background-color: #c44536;
+}
+
+#topCommentTable {
+  font-family: "Lato", sans-serif;
+  font-size: 0.4em;
+  border-collapse: collapse;
+}
+
+#page3 table {
+  border: #b4b2b2 !important;
+}
+
+#topCommentTable td {
+  background-color: transparent !important;
+  border: 0px solid #b4b2b2 !important;
+}
+
+#topCommentTable #row1 {
+  border-width: 0 0 0 0 !important;
+}
+
+#topCommentTable #row2,
+#topCommentTable #row3,
+#topCommentTable #row4 {
+  border-width: 1px 0 0 0 !important;
+}
+
+#topCommentTable #row5 {
+  border-width: 1px 0 0 0 !important;
+}
+
+#topCommentTable .column2 {
+  border-width: 0 0 0 1px !important;
+}
+
+#buttonBorder {
+  border: none;
+  border-radius: 10px;
+  margin: 0;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+#buttonBorder:hover {
+  background-color: rgba(139, 136, 136, 0.3);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  transition: background-color 0.5s ease;
+}

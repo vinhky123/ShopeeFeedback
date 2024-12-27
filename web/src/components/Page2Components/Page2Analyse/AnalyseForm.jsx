@@ -31,11 +31,11 @@ function AnalyseForm({ onUrlChange, loading }) {
               value={url}
               type="text"
             />
-            <div className={styles.placeholder}>Url</div>
+            <div className={styles.placeholder}>This service is unavailable at the moment</div>
           </div>
-          <button className={styles.btn} type="submit" disabled={loading}>
+          <button className={styles.btn} type="submit" disabled={loading || true}>
             <label className={styles.btnLabel} htmlFor="urlInput">
-              {loading ? "Loading" : "Submit"}
+              {loading ? "Not working" : "Submit"}
             </label>
             {loading ? (
               <span className="spinner-border spinner-border-sm"></span>

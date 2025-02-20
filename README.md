@@ -15,6 +15,6 @@ After a short delay, website returns valuable informations for users, include:
 # About the website
 The React front end is still deployed at [Vercal](https://shopee-feedback.vercel.app/).
 Unfortunately, due to Shopee policy and the funding issue, I stopped the server side.
-The demo is in the (Demo.mp4).
+The demo is in the (Demo.mp4). Also here is the [Report](Project-Report.pdf)
 
 Although there are still many flaws, this website remains a source of pride for me because it is my very first product and has been recognized by my classmates and lecturers.
